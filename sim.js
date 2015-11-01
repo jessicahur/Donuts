@@ -19,6 +19,7 @@ Donuts.prototype.numDonuts = function (hours){
       while (numCustomers< this.minCus || numCustomers > this.maxCus)
 
   //Calculate the number of donuts per hour and store them in array
+  // testing if numCustomers was correctly installed: console.log(numCustomers);
   donutsPerHr = numCustomers*this.avgSale;
   sales.push(donutsPerHr);
   total+=donutsPerHr;
@@ -45,8 +46,10 @@ function Instantiate(){ //Instantiate donut location objects
   return donutsLocations;
 }
 
-////////////////////////////////
-Testing:
-a= Instantiate();
+//////////////////////////////// Testing:
+
+a = Instantiate();
+b = a[1].numDonuts([8, 12]);
+
 
 
