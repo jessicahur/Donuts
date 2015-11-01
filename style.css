@@ -1,0 +1,15 @@
+table{
+  padding: 10px;
+  margin: auto;
+}
+th{
+  letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+
+tr.hours{
+  background-color: #efefef;
+}
+td{
+
+}
