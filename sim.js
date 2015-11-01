@@ -1,8 +1,8 @@
-function Donuts(place, avgSale, minCus, maxCus){
+function Donuts(place, avgSale, maxCus, minCus){
   this.place = place;
   this.avgSale = avgSale;
-  this.minCus = minCus;
   this.maxCus = maxCus;
+  this.minCus = minCus;
 }
 
 Donuts.prototype.numDonuts = function (hours){
@@ -36,18 +36,17 @@ var Chain = {
   minCus: [8, 4, 9, 2, 8]
 }
 
-function Simulate(){
-
+function Instantiate(){ //Instantiate donut location objects
+  var DownTown, CapitolHill, SouthLake, Wedgewood, Ballard;
+  var donutsLocations = [DownTown, CapitolHill, SouthLake, Wedgewood, Ballard];
   for (jj=0; jj<Chain['locations'].length; jj++){
-  var
+  donutsLocations[jj] = new Donuts(Chain.locations[jj], Chain.avgSale[jj], Chain.maxCus[jj], Chain.minCus[jj]);
   }
+  return donutsLocations;
 }
 
 ////////////////////////////////
 Testing:
-var x = new Donuts('downtown', 4, [8,18]);
-y=x.place;
-console.log(y);
-z=x.numDonuts();
-z;
+a= Instantiate();
+
 
