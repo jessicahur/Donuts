@@ -27,11 +27,13 @@ Donuts.prototype.numDonuts = function (hours){
   return sales;
 }
 
-//Storing all chain stores in object Chain
+
+//Storing all chain stores in object Chain and instantiate 5 objects
 var Chain = {
-  locations: ['downtown','99 Wall Street'],
-  avgSale: [4,2],
-  hours: [[8,18],[9,17]]
+  locations: ['Down Town', 'Capitol Hill', 'South Lake Union', 'Wedgewood', 'Ballard'],
+  avgSale: [4.5, 2, 6.33, 1.25, 3.75],
+  maxCus: [43, 37, 23, 28, 58],
+  minCus: [8, 4, 9, 2, 8]
 }
 
 function Simulate(){
