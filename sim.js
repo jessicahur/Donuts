@@ -43,16 +43,29 @@ function Instantiate(){ //Instantiate donut location objects
   return donutsLocations;
 }
 
-var donutsLocations = Instantiate();
 
+function donutSimulation(hours){
+  var ID = [["dt1", "dt2", "dt3", "dt4", "dt5", "dt6", "dt7", "dt8", "dt9", "dt10", "dt11", "dt12", "dtTotal"],
+  ["ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8", "ch9", "ch10", "ch11", "ch12", "chTotal"],
+  ["sl1","sl2","sl3","sl4","sl5","sl6","sl7","sl8","sl9","sl10","sl11","sl12","slTotal"],
+  ["w1","w2","w3","w4","w5","w6","w7","w8","w9","w10","w11","w12","wTotal"],
+  ["b1","b2","b3","b4","b5","b6","b7","b8","b9","b10","b11","b12","bTotal"]];
+  var donutsLocations = Instantiate();
+  for (var ii = 0; ii < ID.length; ii++){
+    var place = donutsLocations[ii];
+    console.log(typeof place);
+    var Input = place.numDonuts(hours);
 
-var ID = [["dt1", "dt2", "dt3", "dt4", "dt5", "dt6", "dt7", "dt8", "dt9", "dt10", "dt11", "dt12", "dtTotal"],
-["ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8", "ch9", "ch10", "ch11", "ch12", "chTotal"],
-["sl1","sl2","sl3","sl4","sl5","sl6","sl7","sl8","sl9","sl10","sl11","sl12","slTotal"],
-["w1","w2","w3","w4","w5","w6","w7","w8","w9","w10","w11","w12","wTotal"],
-["b1","b2","b3","b4","b5","b6","b7","b8","b9","b10","b11","b12","bTotal"]];
+    for (var kk = 0; kk < ID[0].length; kk++){
+      var data = document.getElementById(ID[ii][kk]);
+      data.textContent = Input[kk];
+    }
+  }
+}
+
 
 /*
+var donutsLocations = Instantiate();
 //Wrapper function for this simulation
 function donutSimulation(hours){
   printDT(hours);
@@ -116,10 +129,10 @@ function printB(hours){
     data.innerHTML = Input[kk];
   }
 }
-
+*/
 //Start the simulation
 donutSimulation([7,18]);
-*/
+
 //////////////////////////////// Testing:
 
 a = Instantiate();
