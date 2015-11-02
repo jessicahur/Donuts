@@ -1,15 +1,38 @@
+
+
+body{
+  background-color: #FFF7F9;
+}
+h1{
+  text-align: auto;
+  letter-spacing: 0.1em;
+}
 table{
-  padding: 10px;
   margin: auto;
+  border-collapse: collapse;
 }
 th{
-  letter-spacing: 0.1em;
-text-transform: uppercase;
+  padding: 7px 10px 7px 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 tr.hours{
   background-color: #efefef;
 }
-td{
-
+tr.even{
+  text-align: center;
+  background-color: white;
 }
+tr.odd{
+  text-align: center;
+  background-color: white;
+}
+.locations{
+  background-color: Pink;
+  border-bottom: solid 1px silver;
+}
+/*td{
+  border-left: solid 1px silver;
+  border-right: solid 1px silver;
+} */
